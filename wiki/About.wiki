@@ -1,9 +1,7 @@
 #labels Featured,about
-= About =
-
 [http://yellosoft-alchemy.googlecode.com/svn/trunk/recipes/ Sample scripts]
 
-What is Alchemy?
+= What is Alchemy? =
 
  * an HTTP proxy
  * an Ad blocker
@@ -56,7 +54,7 @@ The filtering list can specify Strings or Regexps. They will be converted into R
 
 Alchemy uses whitelists and blacklists in scripts to control which URLs scripts can be applied to. Here, the whitelist (+'s) contains URLs or URL parts that a script DOES apply to. A blacklist (-'s) contains URLs or URL parts that the script will NOT apply to.
 
-== Dependencies ==
+= Dependencies =
 
 Alchemy:
  * Ruby >= 1.8.6
@@ -67,11 +65,11 @@ Some of the recipes use:
 
 Note: Thinking about replacing Hpricot with REXML, which is now included with Ruby.
 
-== Troubleshooting ==
+= Troubleshooting =
 
 While testing the ad blocker with Safari, ads never seemed to disappear. Finally, after emptying the cache and using [http://ditchnet.org/cocoacookies/ Cocoa Cookies] to delete all cookies, the ads stopped displaying. The ad blocker was working fine; the problem was that Safari had already stored the ads and was replaying them despite the fact that Alchemy had removed their content.
 
-== Future ==
+= Future =
 
 The goal is to provide a public proxy that works with all web browsers, replacing Greasemonkey.
 
