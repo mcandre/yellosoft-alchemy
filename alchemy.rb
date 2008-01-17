@@ -380,8 +380,6 @@ def main
 				load_settings(f, settings)
 			}
 
-			puts "Got this far"
-
 			puts "loaded config" if $debug
 		rescue Errno::ENOENT => e
 			puts "Could not load config"
