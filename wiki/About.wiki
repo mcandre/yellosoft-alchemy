@@ -7,6 +7,8 @@
  * an Ad blocker
  * a web customizer
 
+[http://i241.photobucket.com/albums/ff300/nilsmilo/alchemyscreen.png]
+
 Like [http://adblockplus.org/en/ Adblock Plus], [http://www.greasespot.net/ Greasemonkey], [http://userstyles.org/stylish/ Stylish], and exactly like [http://code.whytheluckystiff.net/mouseHole/ MouseHole], Alchemy downloads web pages for you. Before you see them, your custom scripts chop the web code just the way you like it. Block ads, redesign pages, insert your own code. Alchemy is intended to be a [http://www.mnot.net/blog/2005/05/09/greasemonkey GreaseProxy].
 
 Don't want to type out a long URL? Use
