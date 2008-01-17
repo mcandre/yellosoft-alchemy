@@ -1,0 +1,11 @@
+host: localhost
+port: 8080
+search: YubnubCommandLine.rb
+unzip: Unzipper.rb
+recipes: [
+	AdBouncer.rb,
+	CoralCCDN.rb,
+	FarkRedirectRemover.rb,
+	GoogleTimmy.rb
+#	RedirectRemover.rb
+]
