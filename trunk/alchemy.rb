@@ -1,10 +1,18 @@
 #!/usr/bin/env ruby
+#  ___ ___         __ __         _______         ___ __
+# |   |   |.-----.|  |  |.-----.|     __|.-----.'  _|  |_       .--.--.-----.
+#  \     / |  -__||  |  ||  _  ||__     ||  _  |   _|   _|  __  |  |  |__ --|
+#   |___|  |_____||__|__||_____||_______||_____|__| |____| |__| |_____|_____|
 #
-# Author:: Andrew Pennebaker
-# Copyright:: Copyright 2007 Andrew Pennebaker
-# License:: GPLv3
+# == Summary ==
 #
-# == Credits
+# Alchemy - A Greasemonkey proxy with Ruby user scripts
+#
+# == License ==
+#
+# GPLv3
+#
+# == Credits ==
 #
 # The big idea, and page modding techniques
 #
@@ -21,60 +29,32 @@
 #    Ed Zahurak
 #    http://www.chris.com/ascii/art/html/monsters.html
 #
-# == Requirements
+# == Requirements ==
 #
 # Ruby >= 1.8.6
+# RubyGems >= 0.9.4
+# Hpricot >= 0.6
 
 V="0.0.1"
-HOME_PAGE="http://mcandre.devjavu.com/wiki/Alchemy"
+HOME_PAGE="http://code.google.com/p/yellosoft-alchemy/"
 
 USAGE = <<END
-                    \\                  /
-           _________))                ((__________
-          /.-------./\\\\    \\    /    //\\.--------.\\
-         //#######//##\\\\   ))  ((   //##\\\\########\\\\
-        //#######//###((  ((    ))  ))###\\\\########\\\\
-       ((#######((#####\\\\  \\\\  //  //#####))########))
-        \\##' `###\\######\\\\  \\)(/  //######/####' `##/
-         )'    ``#)'  `##\\`->oo<-'/##'  `(#''     `(
-                 (       ``\\`..'/''       )
-                            \\""(
-                             `- )
-                             / /
-                            ( /\\
-                            /\\| \\
-                           (  \\
-                               )
-                              /
-                             (
-                             `
-
-===============================================================
-==  Alchemy #{  V   } (#{           HOME_PAGE            })  ==
-===============================================================
-
+Alchemy #{V} ( #{HOME_PAGE} )
 Usage: alchemy [OPTIONS]
 
 --help, -h:
     show usage information
-
 --debug, -d:
     enable debug mode
-
 --config, -c <file>:
     load specified configuration file
-
     default is "./default.yaml"
-
 --address, -a <ip address>[:<port>]:
     run on specified ip address (and optional port)
-
 --port, -p <port>:
     run on specified port (1023 < port < 65536)
-
 --recipedir, -r <directory>:
     load scripts from directory
-
     default is "./recipes"
 END
 
