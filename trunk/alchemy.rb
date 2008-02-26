@@ -24,10 +24,6 @@
 #    Paul Battley
 #    http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/142072
 #
-# ASCII art
-#
-#    Ed Zahurak
-#    http://www.chris.com/ascii/art/html/monsters.html
 #
 # == Requirements ==
 #
@@ -66,7 +62,6 @@ end
 require "pp"
 
 require "getoptlong"
-require "rdoc/usage"
 
 require "webrick/httpproxy"
 require "webrick/httpservlet"
