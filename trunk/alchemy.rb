@@ -24,7 +24,6 @@
 #    Paul Battley
 #    http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/142072
 #
-#
 # == Requirements ==
 #
 # Ruby >= 1.8.6
@@ -248,9 +247,13 @@ class RedirectingProxyServer < WEBrick::HTTPProxyServer
 		begin
 			super(req, res)
 		rescue WEBrick::HTTPStatus::Status => e
-			puts "redirecting to search"
-
-			@workshop.search.run(req, res)
+			# Ignore own redirects
+			if e.is_a?(WEBrick::HTTPStatus::TemporaryRedirect)
+				super(req, res)
+			else
+				puts "redirecting to search"
+				@workshop.search.run(req, res)
+			end
 		end
 	end
 end
@@ -386,7 +389,7 @@ def main
 					settings["recipedir"]=value
 			end
 		}
-	rescue
+	rescue Exception => e
 		usage
 	end
 
