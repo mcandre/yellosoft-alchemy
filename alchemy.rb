@@ -112,17 +112,17 @@ class Recipe
 		end
 	end
 
-	def in_content_types?(content_type)
-		if $debug
-			temp=@content_types.select { |regex| content_type =~ regex }
-			if temp.length>0
-				puts "#{@name} Matching content: #{content_type}"
-				pp temp
-			end
-		end
+#	def in_content_types?(content_type)
+#		if $debug
+#			temp=@content_types.select { |regex| content_type =~ regex }
+#			if temp.length>0
+#				puts "#{@name} Matching content: #{content_type}"
+#				pp temp
+#			end
+#		end
 
-		return @content_types.any? { |regex| content_type=~ regex }
-	end
+#		return @content_types.any? { |regex| content_type=~ regex }
+#	end
 
 	def in_whitelist?(url)
 		if $debug
@@ -149,7 +149,21 @@ class Recipe
 	end
 
 	def applies?(req, res)
-		if in_content_types?(res.header["content-type"])
+		puts "Header:"
+		pp res.header
+
+		header=res.header
+		if header.nil?
+			return false
+		end
+
+		content_type=header["content-type"]
+		if content_type.nil?
+			return false
+		end
+
+		# Only HTML pages
+		if content_type.include?("text/html") #in_content_types?(res.header["content-type"])
 			url=res.request_uri.to_s
 
 			return !in_blacklist?(url) && in_whitelist?(url)
