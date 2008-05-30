@@ -413,7 +413,7 @@ def main
 	puts "starting on #{settings["host"]}:#{settings["port"]}"
 
 	server=AlchemyServer.new(settings)
-	%w[INT HUP].each { |signal| trap(signal) { server.shutdown } }
+	%w[INT].each { |signal| trap(signal) { server.shutdown } }
 	server.start
 end
 
