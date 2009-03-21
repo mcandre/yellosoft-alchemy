@@ -8,9 +8,6 @@
 #
 # Alchemy - A Greasemonkey proxy with Ruby user scripts
 #
-# == License ==
-#
-# GPLv3
 #
 # == Credits ==
 #
