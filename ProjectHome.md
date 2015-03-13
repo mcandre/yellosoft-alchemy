@@ -1,0 +1,1 @@
+This Greaseproxy allows adblocking, link modification for Coral CCDN, Google Cache, etc., web tweaking, ultimate customization of what shows up in your browser. Anything you can do in Ruby you can do to HTML in Alchemy. Chop it up!
